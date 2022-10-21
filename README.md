@@ -8,7 +8,15 @@ It has been tested for Python 3.6 but should also work with newer versions.
 
 ## Citation
 ```
-@<citation_will_appear_here>
+@inproceedings{grenander-etal-2022-sentence,
+ title = "Sentence-Incremental Neural Coreference Resolution",
+ author = {Grenander, Matt and Cohen, Shay B. and Steedman, Mark},
+ booktitle = "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
+ month = dec,
+ year = "2022",
+ address = "Abu Dhabi, United Arab Emirates and Virtual",
+ publisher = "Association for Computational Lingustics",
+}
 ```
 
 
@@ -93,11 +101,8 @@ The training scripts will create a directory `<data_dir>/<config_name>` and plac
 Tensorboard files are available under `<data_dir>/tensorboard`.
 
 ## Evaluation
-We provide trained models:
-- Part-Incremental: \<link>
-- Sentence-Incremental: \<link>
+We provide trained models [here](https://drive.google.com/drive/folders/1nDHs80QXKRT7C_4DuIPEhFSDlyz8kkTJ?usp=sharing).
 
-\# TODO: Upload models and update links
 
 Unzip them under `<data_dir>` and run `evaluate.py` using the template: 
 ```
