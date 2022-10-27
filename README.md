@@ -103,8 +103,7 @@ Tensorboard files are available under `<data_dir>/tensorboard`.
 ## Evaluation
 We provide trained models [here](https://drive.google.com/drive/folders/1nDHs80QXKRT7C_4DuIPEhFSDlyz8kkTJ?usp=sharing).
 
-
-Unzip them under `<data_dir>` and run `evaluate.py` using the template: 
+Place them under a directory matching the config name (under `<data_dir>`) and run `evaluate.py` using the template: 
 ```
 python evaluate.py <config_name> <model_checkpoint> <gpu_id>
 ```
