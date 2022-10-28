@@ -66,21 +66,10 @@ python preprocess --input_dir <data_dir> --output_dir <data_dir> --split_sents
 * Download the CODI-CRAC corpus:
   * AMI, Light and Persuasion can be downloaded from [Codalab](https://competitions.codalab.org/competitions/30312#participate-get-data) (you will need to create an account). 
   * Switchboard must be acquired from LDC (corpus ID: LDC2021E05).
-* Use our [fork of the conversion script](https://github.com/mgrenander/codi2021_scripts) to convert the data to jsonlines with the following commands:
+* Use our [fork of the conversion script](https://github.com/mgrenander/codi2021_scripts) to convert the data to jsonlines:
 ```
-import helper
-
-# Part-Incremental setup
-helper.convert_coref_ua_to_json(<ami_path>, <jsonlines_path>, SEGMENT_SIZE=512, TOKENIZER_NAME='xlnet-base-cased', sentences=False)
-helper.convert_coref_ua_to_json(<light_path>, <jsonlines_path>, SEGMENT_SIZE=512, TOKENIZER_NAME='xlnet-base-cased', sentences=False)
-# Etc.
-
-# Sentence-Incremental setup
-helper.convert_coref_ua_to_json(<ami_path>, <jsonlines_path>, SEGMENT_SIZE=512, TOKENIZER_NAME='xlnet-base-cased', sentences=True)
-helper.convert_coref_ua_to_json(<light_path>, <jsonlines_path>, SEGMENT_SIZE=512, TOKENIZER_NAME='xlnet-base-cased', sentences=True)
-# Etc.
+python convert_all_to_jsonlines.py --input_dir <input_dir> --output_dir <data_dir>
 ```
-  
 
 ## Training
 Pick a configuration from `experiments.conf` and supply it to `run.py`, e.g.:
