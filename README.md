@@ -100,12 +100,12 @@ python evaluate.py <config_name> <model_checkpoint> <gpu_id>
 Some sample evaluation commands:
 ```
 # OntoNotes
-python evaluate.py train_xlnet_part_inc Mar15_03-50-14_61000 0
+python evaluate.py train_xlnet_k_sents_20 Mar15_03-50-14_61000 0
 
 python evaluate.py train_xlnet_sent_inc Feb05_12-38-09_61000 0
 
 # CODI-CRAC
-python evaluate.py xlnet_ami_part_inc Mar15_03-50-14_61000 0
+python evaluate.py train_xlnet_k_sents_20 Mar15_03-50-14_61000 0
 
 python evaluate.py xlnet_ami_sent_inc Feb05_12-38-09_61000 0
 
