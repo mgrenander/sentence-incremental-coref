@@ -303,7 +303,7 @@ class CorefModel(nn.Module):
                 coref_scores = self.get_coref_scores(candidate_span_rep, genre, self.mention_idx, last_coref_action)
                 predicted_coref_action = torch.argmax(coref_scores)
 
-                if self.training:  # Teacher forcing or DAgger
+                if self.training:  # Teacher forcing
                     gold_coref_action = gold_mention_cluster_map[self.mention_idx]
                     chosen_coref_action = gold_coref_action
                     cluster_loss = self.coref_cross_entropy_loss(coref_scores, gold_coref_action.unsqueeze(0))
