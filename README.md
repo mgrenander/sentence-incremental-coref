@@ -134,3 +134,11 @@ Arguments:
   --eval_data EVAL_DATA
                         Either 'dev' or 'test'
 ```
+
+## Erratum
+
+The repository's published model for the Part-Incremental setting on CODI-CRAC does not exactly match the reported scores in the EMNLP paper, 
+differing by ~0.15 CoNLL F1.
+This discrepancy is due to an error in our CODI-CRAC pre-processing which made the first two sentences of each document appear as one sentence.
+Replicating the exact scores can be done by swapping [lines 356-358](https://github.com/mgrenander/codi2021_scripts/blob/main/preprocess.py#L356-L358)
+and [line 359](https://github.com/mgrenander/codi2021_scripts/blob/main/preprocess.py#L359) in the [CODI-CRAC pre-processing repository](https://github.com/mgrenander/codi2021_scripts).
