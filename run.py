@@ -11,7 +11,6 @@ from torch.optim import Adam
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import LambdaLR
 from torch.utils.tensorboard import SummaryWriter
-from transformers import AdamW
 
 import conll
 import util
