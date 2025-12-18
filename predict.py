@@ -30,6 +30,7 @@ if __name__ == '__main__':
 
     with open(args.output_path, 'w') as f:
         for i, doc in enumerate(docs):
+            doc['clusters'] = stored_info['gold'][doc['doc_key']]
             doc['predicted_mention_actions'] = result[i]['predicted_mention_actions']
             doc['predicted_clusters'] = result[i]['predicted_clusters']
             doc['gold_coref_actions'] = result[i]['gold_coref_actions']

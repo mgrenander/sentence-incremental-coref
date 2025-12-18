@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from torch.nn.functional import pad
-from transformers import XLNetModel
+from transformers.models.xlnet.modeling_xlnet import XLNetModel
 import logging
 from stack_lstm import StackLSTM
 from pytorch_utils import make_embedding, make_ffnn

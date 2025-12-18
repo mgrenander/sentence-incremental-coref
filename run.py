@@ -8,6 +8,7 @@ from os.path import join
 import numpy as np
 import torch
 from torch.optim import Adam
+from torch.optim import AdamW
 from torch.optim.lr_scheduler import LambdaLR
 from torch.utils.tensorboard import SummaryWriter
 from transformers import AdamW
